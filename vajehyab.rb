@@ -8,6 +8,7 @@ class Vajehyab < Formula
   depends_on "jq"
 
   def install
-    prefix.install Dir["../*"]
+    prefix.install "var/vajehyab"
+    prefix.install Dir["./*"]
   end
 end
