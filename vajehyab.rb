@@ -9,11 +9,8 @@ class Vajehyab < Formula
   depends_on "jq"
 
   def install
-    
+    prefix.install Dir["var/vajehyab"]
 
-    system "make", "install"
-    # cp buildpath/"var/vajehyab", prefix/"var"
-
-    # bin.install Dir["./*"]
+    bin.install Dir["bin/*"]
   end
 end
