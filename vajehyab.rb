@@ -10,7 +10,7 @@ class Vajehyab < Formula
 
   def install
     system "./configure", "--disable-debug",
-                          
+                          "--disable-silent-rules",
                           "--prefix=#{prefix}"
 
     system "make", "install"
