@@ -9,7 +9,7 @@ class Vajehyab < Formula
   depends_on "jq"
 
   def install
-    prefix.install Dir["bin/vajehyab"]
-    prefix.install Dir["var/vajehyab-config"]
+    bin.install "vajehyab"
+    var.install "vajehyab-config"
   end
 end
