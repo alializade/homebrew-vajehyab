@@ -9,15 +9,7 @@ class Vajehyab < Formula
   depends_on "jq"
 
   def install
-    # ENV.deparallelize
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
-    # system "cmake", ".", *std_cmake_args
-    system "make", "install"
-    
-    # bin.install Dir["output/*"]
+    prefix.install Dir["./*"]
     # var.install "./var/vajehyab-config"
   end
 end
