@@ -9,9 +9,7 @@ class Vajehyab < Formula
   depends_on "jq"
 
   def install
-    system "./configure", "--disable-debug",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+    
 
     system "make", "install"
     # cp buildpath/"var/vajehyab", prefix/"var"
