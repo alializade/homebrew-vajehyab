@@ -8,7 +8,7 @@ class Vajehyab < Formula
   depends_on "jq"
 
   def install
-    system "./configure", "--prefix=#{prefix}", "--with-intl=system-icu"
+    system "./configure"
     system "make", "install"
   end
 end
