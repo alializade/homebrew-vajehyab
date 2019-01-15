@@ -9,7 +9,7 @@ class Vajehyab < Formula
   depends_on "jq"
 
   def install
-    bin.install "vajehyab"
-    var.install "vajehyab-config"
+    bin.install "bin/vajehyab"
+    var.install "var/vajehyab-config"
   end
 end
