@@ -5,10 +5,11 @@ class Vajehyab < Formula
   sha256 "591c0e17064bda2f065395a290527e5789d363d2a19df47ecbb8a49d79fa07d4"
 
   depends_on "bash" => :run
+  depends_on "curl"
   depends_on "jq"
 
   def install
-    # prefix.install Dir["./*"]
-    system "make", "install"
+    prefix.install Dir["bin/vajehyab"]
+    prefix.install Dir["var/vajehyab-config"]
   end
 end
