@@ -9,7 +9,7 @@ class Vajehyab < Formula
   depends_on "jq"
 
   def install
-    prefix.install Dir["./*"]
+    bin.install Dir["bin/*"]
     # system "./configure", "--disable-debug",
     #                       "--disable-dependency-tracking",
     #                       "--disable-silent-rules",
