@@ -9,12 +9,12 @@ class Vajehyab < Formula
   depends_on "jq"
 
   def install
-    bin.install Dir["bin/*"]
-    # system "./configure", "--disable-debug",
-    #                       "--disable-dependency-tracking",
-    #                       "--disable-silent-rules",
-    #                       "--prefix=#{prefix}"
+    # prefix.install Dir["./*"]
+    system "./configure", "--disable-debug",
+                          "--disable-dependency-tracking",
+                          "--disable-silent-rules",
+                          "--prefix=#{prefix}"
 
-    # system "make", "install"
+    system "make", "install"
   end
 end
