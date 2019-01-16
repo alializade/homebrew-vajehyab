@@ -1,20 +1,20 @@
 class Vajehyab < Formula
   desc "English, Persian, and Arabic dictionary"
   homepage "https://www.vajehyab.com/"
-  url "https://github.com/alializade/vajehyab/archive/v1.0.0.tar.gz"
-  sha256 "380b0b33194fb672f9ddb5203a0d02c68ed29ed2bda2460f482f1342a4d3f5bd"
+  url "https://github.com/alializade/vajehyab/archive/v1.0.1.tar.gz"
+  sha256 "2a72a33ce84901237aa1f1ab15c71e0fad696ac0a497a6116a69a68b24f42bb7"
 
   depends_on "bash" => :run
   depends_on "curl"
   depends_on "jq"
 
   def install
-    # prefix.install Dir["./*"]
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
-
-    system "make", "install"
+    prefix.install Dir["./*"]
+    # system "./configure", "--disable-debug",
+    #                       "--disable-dependency-tracking",
+    #                       "--disable-silent-rules",
+    #                       "--prefix=#{prefix}"
+    #
+    # system "make", "install"
   end
 end
