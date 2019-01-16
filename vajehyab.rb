@@ -10,5 +10,11 @@ class Vajehyab < Formula
 
   def install
     prefix.install Dir["./*"]
+    # system "./configure", "--disable-debug",
+    #                       "--disable-dependency-tracking",
+    #                       "--disable-silent-rules",
+    #                       "--prefix=#{prefix}"
+
+    # system "make", "install"
   end
 end
